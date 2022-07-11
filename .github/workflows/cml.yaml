@@ -16,10 +16,8 @@ jobs:
       - name: cml_run
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # Your ML workflow goes here
-          pip install -r requirements.txt
-          python pre_work_train.py
+        run: pip install -r requirements.txt
+             python pre_work_train.py
           
           echo "## Model metrics" > report.md
           cat metrics.txt >> report.md
