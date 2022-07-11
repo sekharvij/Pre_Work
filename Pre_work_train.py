@@ -60,7 +60,7 @@ import pickle
 
 
 zi = zipfile.ZipFile('C:/Users/SEKHAR/Desktop/Pre_Work/recruitment-air-quality-2/data/train.zip') 
-data = pd.read_csv(zi.open('train.csv'))
+data = pd.read_csv('train.csv')
 
 
 # In[3]:
