@@ -1,5 +1,11 @@
 name: pre_work
-on: [push]
+on:  
+  push:
+  pull_request:
+    branches:
+      - main
+
+
 jobs:
   run:
     runs-on: [ubuntu-latest]
