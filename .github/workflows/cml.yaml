@@ -8,7 +8,8 @@ jobs:
 
       - name: checkout repo content
       - uses: actions/checkout@v2 # checkout the repository content to github runner
-      - name: cml_run
+
+      
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
