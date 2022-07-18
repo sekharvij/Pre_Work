@@ -1,10 +1,5 @@
 name: pre_work
-on:  
-  push:
-  pull_request:
-    branches:
-      - main
-
+on:  [push]
 
 jobs:
   run:
@@ -16,8 +11,10 @@ jobs:
       - name: cml_run
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-        run: pip install -r requirements.txt
-             python pre_work_train.py
+        run: |
+        
+          pip install -r requirements.txt
+          python pre_work_train.py
           
           echo "## Model metrics" > report.md
           cat metrics.txt >> report.md
